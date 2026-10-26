@@ -17,15 +17,11 @@ HTML·CSS·JavaScript로 구성했습니다. 설치·빌드 과정과 서버 프
 
 ## GitHub Pages 배포
 
-개인 홈페이지 주소로 사용하려면 `Fentanest.github.io` 저장소에 이 폴더의 내용을 올립니다. 기존 다른 저장소는 변경하지 않습니다.
+사이트: https://fentanest.github.io/
 
-1. GitHub에서 새 공개 저장소 `Fentanest.github.io`를 만듭니다.
-2. 이 폴더의 파일을 `main` 브랜치 루트에 올립니다.
-3. **Settings → Pages → Build and deployment**에서 **Deploy from a branch**를 선택합니다.
-4. `main` / `/(root)`를 선택하고 저장합니다.
-5. 배포 완료 후 Pages 화면에 표시된 주소를 확인합니다.
+저장소: https://github.com/Fentanest/Fentanest.github.io
 
-다른 저장소 이름으로 배포해도 상대 경로를 사용하므로 동작합니다. `.nojekyll` 파일을 유지합니다.
+`main` 브랜치 루트에서 배포합니다. 파일을 수정해 `main`에 반영하면 GitHub Pages가 갱신됩니다. `.nojekyll` 파일을 유지합니다.
 
 ## 내용 수정
 
@@ -35,7 +31,7 @@ HTML·CSS·JavaScript로 구성했습니다. 설치·빌드 과정과 서버 프
 - 이미지: `assets/` 아래에 두고 HTML의 `src`·`href`를 함께 변경합니다.
 - 경력 업데이트: `career.html`의 재직기간과 기준 월을 함께 수정합니다.
 
-이미지 교체 목록은 [IMAGE_TODO.md](IMAGE_TODO.md), 공개 이미지 출처는 [ASSET_SOURCES.md](ASSET_SOURCES.md)를 확인합니다.
+추가할 화면은 [IMAGE_TODO.md](IMAGE_TODO.md), 사용한 이미지 목록과 출처는 [ASSET_SOURCES.md](ASSET_SOURCES.md)를 확인합니다.
 
 ## 공개 범위
 
@@ -44,8 +40,10 @@ HTML·CSS·JavaScript로 구성했습니다. 설치·빌드 과정과 서버 프
 - 기존 공개 앱 이미지는 캡처 시점 화면입니다. 현재 앱 Demo 화면으로 표기하지 않습니다.
 - 프로젝트에 사용한 외부 라이브러리·엔진은 각 프로젝트의 출처와 라이선스를 따릅니다. 이 포트폴리오에 해당 소스를 복제하지 않습니다.
 
-## 현재 준비 상태
+## 반영한 화면
 
-사이트 구조·경력·공개 프로젝트 화면은 준비했습니다. 실무 대시보드 5장은 원본을 공개하지 않고 개인정보 삭제본을 추가할 자리를 마련했습니다. 
+서비스 4개, 프로젝트 상세, 경력 페이지를 구성했습니다. Worklazy Tools 공개 화면 3장과 Word Compare 결과, 안전신문고 앱 공개 화면 2장, 개인정보를 가린 실무 대시보드 5장을 반영했습니다.
+
+커뮤니티 지도·크롬 확장 등 추가할 화면은 해당 페이지와 IMAGE_TODO.md에 표시했습니다.
 
 GitHub Pages 안내: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
