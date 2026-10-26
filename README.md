@@ -1,17 +1,18 @@
-# 최큰솔 포트폴리오
+# Fentanest 포트폴리오
 
-문서·엑셀 자동화, 데이터 수집·시각화, 문서 판독·데이터 정리, 업무 시스템 연동 사례를 소개하는 정적 웹사이트입니다.
+제공할 수 있는 작업을 5개 분야로 정리한 정적 포트폴리오입니다. 각 사례에 사용 기술, 처리 흐름, 배포 방식을 함께 적었습니다.
 
 ## 페이지
 
-| 파일 | 내용 |
-| --- | --- |
-| `index.html` | 제공 서비스 4개와 프로젝트 목록 |
-| `career.html` | 금융 준법·품질관리 경력과 실무 제작 사례 |
-| `projects/worklazy.html` | Worklazy Tools, Word Compare, ExcelMerger |
-| `projects/safetyreport.html` | 안전신문고 앱·커뮤니티 지도·크롬 확장 |
-| `projects/spreadsheets.html` | 실무 대시보드 5종 |
-| `projects/data-tools.html` | FolioTrace, Market Calendar, MyTradingDesk, peti |
+| 분야 | 페이지 | 사례 |
+| --- | --- | --- |
+| 문서·파일 자동화 | `projects/worklazy.html` | Worklazy Tools, Word Compare, ExcelMerger, peti |
+| 데이터 수집·ETL | `projects/data-tools.html` | FolioTrace, Market Calendar — 문서 수집·정규화·누적 저장 |
+| 앱·웹 데이터 서비스 | `projects/safetyreport.html` | 안전신문고 앱·공유 데이터·커뮤니티 지도·크롬 확장 |
+| 외부 API·실시간 연동 | `projects/api-integration.html` | MyTradingDesk, Backtest |
+| 스프레드시트 대시보드 | `projects/spreadsheets.html` | 실무자용 엑셀 조회·집계 화면 5종 |
+
+`index.html`은 분야와 프로젝트 목록, `career.html`은 금융 준법·품질관리 경력과 실무 제작 사례를 담았습니다.
 
 HTML·CSS·JavaScript로 구성했습니다. 설치·빌드 과정과 서버 프로그램은 없습니다. 이미지 확대 보기 외의 본문·이동 기능은 JavaScript 없이도 동작합니다.
 
@@ -26,7 +27,7 @@ HTML·CSS·JavaScript로 구성했습니다. 설치·빌드 과정과 서버 프
 ## 내용 수정
 
 - 문구: 각 HTML 파일을 직접 수정합니다.
-- 스타일: `assets/site.css`, `assets/services.css`.
+- 스타일: `assets/site.css`, `assets/services.css`, `assets/technical.css`.
 - 이미지 확대: `assets/site.js`.
 - 이미지: `assets/` 아래에 두고 HTML의 `src`·`href`를 함께 변경합니다.
 - 경력 업데이트: `career.html`의 재직기간과 기준 월을 함께 수정합니다.
@@ -35,14 +36,15 @@ HTML·CSS·JavaScript로 구성했습니다. 설치·빌드 과정과 서버 프
 
 ## 공개 범위
 
-- 지원서·이력서 원문, 개인 연락처, 등록번호, 계좌번호는 포함하지 않습니다.
+- 실명 대신 Fentanest를 사용합니다. 지원서·이력서 원문과 개인 연락처는 포함하지 않습니다.
+- 실무 대시보드는 개인·회사 식별정보를 삭제한 화면만 사용합니다.
 - 비공개 프로젝트 소스나 운영 설정은 포함하지 않습니다.
 - 기존 공개 앱 이미지는 캡처 시점 화면입니다. 현재 앱 Demo 화면으로 표기하지 않습니다.
 - 프로젝트에 사용한 외부 라이브러리·엔진은 각 프로젝트의 출처와 라이선스를 따릅니다. 이 포트폴리오에 해당 소스를 복제하지 않습니다.
 
 ## 반영한 화면
 
-서비스 4개, 프로젝트 상세, 경력 페이지를 구성했습니다. Worklazy Tools 공개 화면 3장과 Word Compare 결과, 안전신문고 앱 공개 화면 2장, 개인정보를 가린 실무 대시보드 5장을 반영했습니다.
+Worklazy Tools 공개 화면 3장, Word Compare 결과, 안전신문고 앱 공개 화면 2장, 개인·회사 식별정보를 삭제한 실무 대시보드 5장을 반영했습니다.
 
 커뮤니티 지도·크롬 확장 등 추가할 화면은 해당 페이지와 IMAGE_TODO.md에 표시했습니다.
 

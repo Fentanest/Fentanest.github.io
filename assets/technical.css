@@ -1,0 +1,42 @@
+.wordmark{font-size:27px;letter-spacing:-.06em}
+.hero h1{font-size:clamp(54px,6.1vw,81px)}
+.hero-bottom>span{letter-spacing:.015em}
+.footer-sub{display:block;margin-top:10px;font-size:11px;color:#bac9ca;letter-spacing:0}
+.tech-spec{margin:25px 0 30px;padding:0;border-top:1px solid var(--line);font-size:12px;line-height:1.8}
+.tech-spec>div{display:grid;grid-template-columns:140px 1fr;gap:25px;padding:13px 0;border-bottom:1px solid var(--line)}
+.tech-spec dt{font-weight:700;color:var(--ink)}
+.tech-spec dd{margin:0;color:var(--muted);overflow-wrap:anywhere}
+.tech-spec+figure{margin-top:40px}
+.prose .tech-spec{font-size:12px}
+.prose .tech-spec>div,.origin-grid .tech-spec>div{grid-template-columns:105px 1fr;gap:15px}
+.origin-grid .tech-spec{font-size:11px;margin-top:25px}
+.origin-grid .small{margin-top:15px}
+.origin-grid+figure{margin-top:35px}
+.gallery-gap{margin-top:40px}
+.api-art{background:#e1e7ed;padding:35px 42px;display:flex;flex-direction:column;justify-content:center}
+.api-art>.eyebrow{font-size:10px;color:#556f87;margin-bottom:22px}
+.api-flow{display:flex;flex-direction:column;align-items:center;gap:7px}
+.api-flow>div{width:100%;background:#f7f9fa;border:1px solid #b9c9d6;padding:14px 22px}
+.api-flow>div>span{display:block;font-size:9px;color:#72859b;margin-bottom:3px}
+.api-flow strong{font-size:20px;letter-spacing:-.025em}
+.api-flow p{font-size:11px;color:#657c92;margin-top:3px}
+.api-flow>b{font-weight:400;color:#7991a6;line-height:1.2}
+.pipeline-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.pipeline-steps>div{padding:25px;border-top:3px solid #345969;background:#eaf0ed}
+.pipeline-steps span{display:block;font-size:10px;color:#688078;margin-bottom:18px}
+.pipeline-steps strong{font-size:21px;letter-spacing:-.04em}
+.pipeline-steps p{font-size:13px;color:var(--muted);margin-top:18px;line-height:1.9}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.related-grid article{border-top:1px solid var(--line);padding-top:25px}
+.related-grid h3{font-size:22px;margin-bottom:15px}
+.related-grid p{font-size:13px;color:var(--muted);margin-bottom:22px}
+.project-stack-table table{min-width:820px}
+.project-stack-table th:first-child{width:230px}
+.project-stack-table .text-link{font-size:12px;gap:10px;border-bottom:0;white-space:normal}
+.project-stack-table td{font-size:12px}
+.case-section .table-scroll{margin-block:28px}
+.case-section .table-scroll+ .text-link{margin-top:10px}
+.document-art .art-footnote{max-width:calc(100% - 30px);text-align:right}
+.credentials{grid-template-columns:1fr}
+@media(max-width:1000px){.tech-spec>div{grid-template-columns:120px 1fr;gap:18px}.api-art{padding:30px}.pipeline-steps{gap:18px}.pipeline-steps>div{padding:22px}.pipeline-steps strong{font-size:19px}}
+@media(max-width:700px){.wordmark{font-size:21px}nav{gap:13px;font-size:10px}.hero h1{font-size:clamp(42px,10.5vw,65px);line-height:1.25}.hero-kicker>span:first-child{font-size:9px}.hero-bottom{gap:20px}.hero-bottom>span{max-width:56%;line-height:1.8}.hero-bottom>a{font-size:9px;text-align:right}.footer-top>p{font-size:20px}.footer-sub{font-size:9px;max-width:180px;line-height:1.9}.footer-top>div{min-width:85px}.tech-spec{font-size:11px;margin:22px 0 28px}.tech-spec>div,.prose .tech-spec>div,.origin-grid .tech-spec>div{grid-template-columns:95px 1fr;gap:13px;padding-block:11px}.tech-spec+figure{margin-top:25px}.prose .tech-spec{font-size:11px}.origin-grid .tech-spec{font-size:10px}.api-art{padding:28px 25px;min-height:410px}.api-art>.eyebrow{font-size:9px}.api-flow>div{padding:13px 18px}.api-flow strong{font-size:18px}.api-flow p{font-size:10px}.pipeline-steps{grid-template-columns:1fr;gap:15px}.pipeline-steps>div{padding:20px}.pipeline-steps span{margin-bottom:10px}.pipeline-steps p{font-size:12px;margin-top:10px}.related-grid{grid-template-columns:1fr;gap:30px}.related-grid h3{font-size:21px}.related-grid p{font-size:12px}.gallery-gap{margin-top:25px}.project-stack-table table{min-width:750px}.project-stack-table .text-link{font-size:11px}.project-stack-table td{font-size:11px}.project-stack-table th:first-child{width:190px}}
