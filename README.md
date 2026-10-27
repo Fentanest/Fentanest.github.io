@@ -44,8 +44,10 @@ HTML·CSS·JavaScript로 구성했습니다. 설치·빌드 과정과 서버 프
 
 ## 반영한 화면
 
-Worklazy Tools 공개 화면 3장, Word Compare 결과, 안전신문고 앱 공개 화면 2장, 개인·회사 식별정보를 삭제한 실무 대시보드 5장을 반영했습니다.
+Worklazy Tools 공개 화면 3장, Word Compare 결과, 안전신문고 앱 공개 화면 2장, 커뮤니티 지도와 크롬 확장 화면, 개인·회사 식별정보를 삭제한 실무 대시보드 5장을 반영했습니다.
 
-커뮤니티 지도·크롬 확장 등 추가할 화면은 해당 페이지와 IMAGE_TODO.md에 표시했습니다.
+커뮤니티 지도는 광고·로그인 ID를 제거하고 차량 표기를 예시로 바꿨습니다. 크롬 확장은 사용자명을 예시로 바꾸고 패널 밖의 식별정보를 잘라냈습니다.
+
+추가할 화면은 해당 페이지와 IMAGE_TODO.md에 표시했습니다.
 
 GitHub Pages 안내: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site

@@ -5,6 +5,8 @@
 - Worklazy Tools: 홈페이지, 엑셀 병합, 워드 일괄 생성.
 - Word Compare: 변경사항 비교 보고서.
 - 안전신문고 앱: 기존 공개 통계·지도 화면.
+- 커뮤니티 지도: 광고·식별정보를 제거한 실제 화면.
+- 크롬 확장: 사용자명을 예시로 바꾼 실제 화면.
 - 실무 대시보드: 개인·회사 식별정보를 삭제한 실제 업무 화면 5장.
 
 ## 추가할 이미지
@@ -14,8 +16,6 @@
 | 위치 | 필요한 이미지 | 넣을 자리 |
 | --- | --- | --- |
 | 안전신문고 앱 | 현행 `Demo 보기`의 목록·상세·통계 | `projects/safetyreport.html`의 기존 앱 화면 교체 또는 추가 |
-| 커뮤니티 지도 | 지역·기간 필터와 기관별 통계 | `projects/safetyreport.html`의 지도 영역 |
-| 크롬 확장 | 차량·주소 조회 패널 | `projects/safetyreport.html`의 확장 영역 |
 | FolioTrace | 공시 원문·추출값·검증 상태 | `projects/data-tools.html#foliotrace` |
 | Market Calendar | 월별 달력·휴장 근거 | `projects/data-tools.html#market-calendar` |
 | MyTradingDesk + Backtest | 계좌정보 없는 조회·전략 편집·모의 실행 결과 | `projects/api-integration.html` |

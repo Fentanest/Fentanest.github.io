@@ -12,6 +12,7 @@
       image.src = trigger.href;
       image.alt = trigger.querySelector('img')?.alt || '';
       caption.textContent = trigger.dataset.caption || image.alt;
+      dialog.classList.toggle('image-dialog-scroll', trigger.hasAttribute('data-lightbox-scroll'));
       dialog.showModal();
       document.body.classList.add('body-dialog-open');
     });
@@ -25,6 +26,7 @@
   });
   dialog.addEventListener('close', () => {
     document.body.classList.remove('body-dialog-open');
+    dialog.classList.remove('image-dialog-scroll');
     lastTrigger?.focus();
     image.removeAttribute('src');
   });

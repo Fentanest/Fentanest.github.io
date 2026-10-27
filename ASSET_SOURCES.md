@@ -1,6 +1,6 @@
 # 공개 이미지 출처
 
-공개 프로젝트 화면과 개인·회사 식별정보를 삭제한 실무 대시보드입니다. 앱 화면은 현재 버전과 일부 차이가 있습니다.
+공개 프로젝트 화면, 직접 제공한 서비스 화면, 개인·회사 식별정보를 삭제한 실무 대시보드입니다. 기존 앱 README 화면은 현재 버전과 일부 차이가 있습니다.
 
 ## 신고 처리 통계
 
@@ -17,6 +17,18 @@ https://github.com/Fentanest/safetyreport-mobile/blob/99d4d1da6d3b808dbd7dd95e69
 https://github.com/Fentanest/safetyreport-mobile/blob/99d4d1da6d3b808dbd7dd95e6965615eeca3abad/docs/images/readme/screen-map.png
 
 공개 README 화면 · 현재 버전과 일부 차이 있음
+
+## 커뮤니티 지도
+
+파일: `assets/safety-community-map.png`
+
+Fentanest가 제공한 실제 서비스 화면입니다. 광고와 식별정보를 제거한 사본을 사용합니다.
+
+## 크롬 확장
+
+파일: `assets/safety-chrome-extension.png`
+
+Fentanest가 제공한 실제 확장 화면입니다. 사용자명을 예시로 바꾼 사본을 사용합니다.
 
 ## Word Compare 결과
 
