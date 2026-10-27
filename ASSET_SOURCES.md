@@ -24,11 +24,17 @@ https://github.com/Fentanest/safetyreport-mobile/blob/99d4d1da6d3b808dbd7dd95e69
 
 Fentanest가 제공한 실제 서비스 화면입니다. 광고와 식별정보를 제거한 사본을 사용합니다.
 
-## 크롬 확장
+## 크롬 확장 통계창
 
 파일: `assets/safety-chrome-extension.png`
 
-Fentanest가 제공한 실제 확장 화면입니다. 사용자명을 예시로 바꾼 사본을 사용합니다.
+Fentanest가 제공한 실제 통계창입니다. 사용자명을 예시로 바꾼 사본을 사용합니다.
+
+## 크롬 확장 차량별·주소별 조회
+
+파일: `assets/safety-chrome-extension-full.png`
+
+Fentanest가 제공한 실제 확장 화면입니다. 좌측 차량별 조회창과 우측 주소별 조회창을 함께 보여줍니다. 개인정보를 예시로 바꾼 사본을 사용합니다.
 
 ## Word Compare 결과
 
