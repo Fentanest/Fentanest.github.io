@@ -108,3 +108,17 @@ Fentanest가 만든 업무 화면입니다. 개인·회사 식별정보를 삭�
 | `assets/dashboard-03.png` | 부동산 담보대출 현황 |
 | `assets/dashboard-04.png` | 투자상품 목록 |
 | `assets/dashboard-05.png` | 상품 통합 검색 |
+
+## fines · 금감원 보고서 자동 작성기
+
+Fentanest가 제공한 실제 실행 화면 5장입니다. 서비스명과 회사명은 `fines`로 바꾸고, 개인명·등록번호·상품명·Google 문서 ID·인증 파일 경로·프로필 식별표시는 예시로 치환하거나 가렸습니다. 화면 크기와 표의 수치·날짜를 유지한 사본만 공개합니다.
+
+| 파일 | 화면 |
+| --- | --- |
+| `assets/fines-launcher.png` | Windows 런처와 로컬 웹서버 실행 |
+| `assets/fines-settings.png` | Google 문서 연결·인증·Apps Script 설치 설정 |
+| `assets/fines-upload.png` | 원천 Excel 입력과 파일별 컬럼 선택 |
+| `assets/fines-report-summary.png` | PL303 · 금액대별 연계투자 현황 보고서 |
+| `assets/fines-report-investors.png` | PL305 · 금융기관 등의 연계투자 현황 보고서 |
+
+원천자료와 인증정보, 비공개 프로그램 소스는 이 저장소에 포함하지 않습니다.

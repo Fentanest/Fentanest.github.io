@@ -6,13 +6,13 @@
 
 | 분야 | 페이지 | 사례 |
 | --- | --- | --- |
-| 문서·파일 자동화 | `projects/worklazy.html` | Worklazy Tools, Word Compare, ExcelMerger, peti |
+| 문서·파일 자동화 | `projects/worklazy.html` | Worklazy Tools, Word Compare, ExcelMerger, peti, fines |
 | 데이터 수집·ETL | `projects/data-tools.html` | FolioTrace, Market Calendar — 문서 수집·정규화·누적 저장 |
 | 앱·웹 데이터 서비스 | `projects/safetyreport.html` | 안전신문고 앱·공유 데이터·커뮤니티 지도·크롬 확장 |
 | 외부 API·실시간 연동 | `projects/api-integration.html` | MyTradingDesk, Backtest |
 | 스프레드시트 대시보드 | `projects/spreadsheets.html` | 실무자용 엑셀 조회·집계 화면 5종 |
 
-`index.html`은 분야와 프로젝트 목록, `career.html`은 금융 준법·품질관리 경력과 실무 제작 사례를 담았습니다.
+`index.html`은 분야와 프로젝트 목록, `career.html`은 금융 준법·품질관리 경력과 실무 제작 사례를 담았습니다. `projects/fines.html`에는 금감원 보고서 자동 작성기의 입력·집계 구조와 실행 화면을 따로 정리했습니다.
 
 HTML·CSS·JavaScript로 구성했습니다. 설치·빌드 과정과 서버 프로그램은 없습니다. 이미지 확대 보기 외의 본문·이동 기능은 JavaScript 없이도 동작합니다.
 
@@ -27,7 +27,7 @@ HTML·CSS·JavaScript로 구성했습니다. 설치·빌드 과정과 서버 프
 ## 내용 수정
 
 - 문구: 각 HTML 파일을 직접 수정합니다.
-- 스타일: `assets/site.css`, `assets/services.css`, `assets/technical.css`.
+- 스타일: `assets/site.css`, `assets/services.css`, `assets/technical.css`. fines 상세 화면은 `assets/fines.css`.
 - 이미지 확대: `assets/site.js`.
 - 이미지: `assets/` 아래에 두고 HTML의 `src`·`href`를 함께 변경합니다.
 - 경력 업데이트: `career.html`의 재직기간과 기준 월을 함께 수정합니다.
@@ -49,6 +49,8 @@ Worklazy Tools 공개 화면 3장, FolioTrace·Market Calendar 실제 서비스 
 FolioTrace는 공개 보유 추정 현황과 종목별 공시 이력, Market Calendar는 국내 월간 달력과 미국 거래시간·공식 공지 화면을 넣었습니다. 2026-10-29에 worklazy.net에서 직접 촬영했으며, 필요한 화면 영역만 잘라 수치와 표시는 유지했습니다.
 
 커뮤니티 지도는 광고·로그인 ID를 제거하고 차량 표기를 예시로 바꿨습니다. 크롬 확장은 통계창과 차량별·주소별 조회창이 한 화면에 보이도록 합성했습니다. 사용자명·담당자명·차량번호·신고번호·상세 주소를 예시로 바꾼 이미지를 사용했습니다. 각 창의 수치와 표시 내용은 유지했습니다.
+
+fines는 런처, Google 연동 설정, 원천자료 업로드, 보고서 결과 2종을 반영했습니다. 서비스명·회사명은 fines로 바꾸고, 개인명·등록번호·상품명·문서 ID·인증 파일 경로 등 식별정보는 예시로 치환했습니다. 화면 크기와 표의 수치·날짜는 유지했습니다.
 
 추가할 화면은 해당 페이지와 IMAGE_TODO.md에 표시했습니다.
 
