@@ -24,6 +24,8 @@ HTML·CSS·JavaScript로 구성했습니다. 설치·빌드 과정과 서버 프
 
 `main` 브랜치 루트에서 배포합니다. 파일을 수정해 `main`에 반영하면 GitHub Pages가 갱신됩니다. `.nojekyll` 파일을 유지합니다.
 
+배포가 성공하면 `cleanup-pages-artifacts.yml`이 완료된 `deploy` 작업을 확인하고 해당 실행의 `github-pages` 아티팩트를 삭제합니다.
+
 ## 내용 수정
 
 - 문구: 각 HTML 파일을 직접 수정합니다.
