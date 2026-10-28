@@ -4,6 +4,8 @@
 
 - Worklazy Tools: 홈페이지, 엑셀 병합, 워드 일괄 생성.
 - Word Compare: 변경사항 비교 보고서.
+- FolioTrace: 공개 보유 추정치·최근 공시, 종목별 공시 이력·원문 링크.
+- Market Calendar: 거래소별 월간 달력, 조기폐장 시간·공식 공지 원문 화면.
 - 안전신문고 앱: 기존 공개 통계·지도 화면.
 - 커뮤니티 지도: 광고·식별정보를 제거한 실제 화면.
 - 크롬 확장: 통계·차량별·주소별 조회 세 창을 한 장으로 합성. 개인정보는 예시로 치환.
@@ -16,8 +18,6 @@
 | 위치 | 필요한 이미지 | 넣을 자리 |
 | --- | --- | --- |
 | 안전신문고 앱 | 현행 `Demo 보기`의 목록·상세·통계 | `projects/safetyreport.html`의 기존 앱 화면 교체 또는 추가 |
-| FolioTrace | 공시 원문·추출값·검증 상태 | `projects/data-tools.html#foliotrace` |
-| Market Calendar | 월별 달력·휴장 근거 | `projects/data-tools.html#market-calendar` |
 | MyTradingDesk + Backtest | 계좌정보 없는 조회·전략 편집·모의 실행 결과 | `projects/api-integration.html` |
 | peti | 가상 TXT 입력과 엑셀 출력 | `projects/worklazy.html#peti` |
 

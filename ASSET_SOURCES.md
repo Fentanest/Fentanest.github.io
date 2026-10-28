@@ -71,6 +71,30 @@ https://github.com/Fentanest/WorklazyTools/blob/16e52d3b7f7cf278de23514643740699
 
 워드 양식과 목록 데이터를 연결하는 시작 화면입니다.
 
+## FolioTrace
+
+공개 서비스에서 직접 촬영한 화면입니다. 촬영일: 2026-10-29.
+
+https://worklazy.net/ko/tools/foliotrace/
+
+| 파일 | 화면 |
+| --- | --- |
+| `assets/foliotrace-overview.png` | 국민연금 공개 보유 추정치, 상위 보유 종목, 최근 공시 변화와 평가 제외 사유 |
+| `assets/foliotrace-detail.jpg` | KB금융 종목 상세: 공시 수량, 보유 기준일, 접수번호, DART 원문 링크와 공시 이력 |
+
+연말 보유 목록과 DART 공시를 바탕으로 계산한 추정치입니다. 화면 범위만 정리했으며 표시된 데이터는 변경하지 않았습니다.
+
+## Market Calendar
+
+공개 서비스에서 직접 촬영한 화면입니다. 촬영일: 2026-10-29.
+
+| 파일 | 화면 | 촬영 URL |
+| --- | --- | --- |
+| `assets/market-calendar-month.png` | KRX 2026년 10월 월간 달력과 10월 9일 한글날 휴장 사유 | https://worklazy.net/ko/tools/market-calendar/?venue=krx&year=2026&month=10&day=9 |
+| `assets/market-calendar-detail.png` | NYSE 2026년 11월 27일 조기폐장 일정, 뉴욕·한국 거래시간과 공식 공지 원문 | https://worklazy.net/ko/tools/market-calendar/?venue=nyse&year=2026&month=11&day=27 |
+
+공식 공지를 수집·정리한 조회 화면입니다. 화면 범위만 정리했으며 표시된 데이터는 변경하지 않았습니다.
+
 ## 실무 대시보드
 
 Fentanest가 만든 업무 화면입니다. 개인·회사 식별정보를 삭제한 사본을 사용합니다.

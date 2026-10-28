@@ -53,3 +53,13 @@
 .image-dialog-scroll .dialog-image-wrap img{display:block;max-width:none;max-height:none;min-width:0;width:auto;height:auto;margin:0 auto}
 @media(max-width:900px){.service-screen-gallery{grid-template-columns:1fr;gap:32px}.service-screen-gallery .project-figure{max-width:690px;margin-inline:auto}}
 @media(max-width:700px){.service-screen-gallery{margin-top:25px;gap:30px}.service-screen-extension{scroll-margin-top:100px}}
+
+/* Data services: readable captures beneath each implementation summary. */
+.data-case-summary{align-items:start}
+.data-case-summary>.tech-spec{margin:0}
+.data-screen-gallery{display:grid;gap:32px;scroll-margin-top:100px}
+.data-screen-gallery .project-figure{min-width:0;margin:0}
+.data-screen-gallery .image-zoom{border:1px solid var(--line);border-radius:5px;overflow:hidden;background:#fff}
+.data-screen-gallery img{display:block;width:100%;height:auto}
+.data-screen-gallery+.text-link{margin-top:28px}
+@media(max-width:700px){.data-screen-gallery{gap:25px;scroll-margin-top:30px}}
