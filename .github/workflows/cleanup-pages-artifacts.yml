@@ -1,13 +1,8 @@
 name: Clean completed Pages artifacts
 
 "on":
-  workflow_run:
-    workflows: ["pages build and deployment"]
-    types: [completed]
-    branches: [main]
   push:
     branches: [main]
-    paths: [".github/workflows/cleanup-pages-artifacts.yml"]
   workflow_dispatch:
 
 permissions:
@@ -32,6 +27,7 @@ jobs:
           python3 - <<'PY'
           import json
           import os
+          import time
           import urllib.error
           import urllib.request
 
@@ -64,17 +60,31 @@ jobs:
                       return
                   page += 1
 
-          with open(os.environ["GITHUB_EVENT_PATH"], encoding="utf-8") as file:
-              event = json.load(file)
-          if os.environ["GITHUB_EVENT_NAME"] == "workflow_run":
-              run_ids = [event["workflow_run"]["id"]]
+          # Previously completed deployments explicitly selected for cleanup.
+          run_ids = [40725197680, 40724138839, 40720803077, 40788939013]
+          # The built-in Pages workflow is dynamic. Wait for this push's run
+          # directly instead of relying on a workflow_run name trigger.
+          commit = os.environ["GITHUB_SHA"]
+          for attempt in range(36):
+              result = api(f"/actions/runs?head_sha={commit}&per_page=100")
+              pages_runs = [run for run in result["workflow_runs"]
+                            if run["name"] == "pages build and deployment"
+                            and run["head_sha"] == commit]
+              if pages_runs and all(run["status"] == "completed" for run in pages_runs):
+                  run_ids.extend(run["id"] for run in pages_runs)
+                  break
+              if attempt < 35:
+                  time.sleep(5)
           else:
-              # One-time cleanup of the three completed portfolio deployments.
-              run_ids = [40725197680, 40724138839, 40720803077]
+              print("No completed Pages run for this commit within three minutes; active runs are preserved")
 
           deleted = 0
           freed = 0
-          for run_id in run_ids:
+          for run_id in dict.fromkeys(run_ids):
+              artifacts = [artifact for artifact in paged(f"/actions/runs/{run_id}/artifacts", "artifacts")
+                           if artifact["name"] == "github-pages"]
+              if not artifacts:
+                  continue
               run = api(f"/actions/runs/{run_id}")
               if (run["name"] != "pages build and deployment"
                       or run["status"] != "completed"
@@ -88,9 +98,7 @@ jobs:
                          and job["conclusion"] == "success" for job in jobs):
                   print(f"Skip run {run_id}: successful deploy job not found")
                   continue
-              for artifact in paged(f"/actions/runs/{run_id}/artifacts", "artifacts"):
-                  if artifact["name"] != "github-pages":
-                      continue
+              for artifact in artifacts:
                   result = api(f"/actions/artifacts/{artifact['id']}", "DELETE")
                   if result is False:
                       print(f"Artifact {artifact['id']} already absent")
