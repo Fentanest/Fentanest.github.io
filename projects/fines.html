@@ -6,29 +6,24 @@
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#f5f4ef">
   <title>fines · 금감원 보고서 자동 작성기</title>
-  <meta name="description" content="Excel 원천자료를 검사해 Google Sheets에 적재하고, Apps Script로 업무보고서·상시감시보고서를 작성합니다. Python·Flask·Google API 연동 사례.">
+  <meta name="description" content="DB에서 내보낸 Excel을 검사해 Google Sheets에 올리고, Apps Script로 금감원 보고서를 계산합니다. 입력 화면, 보고서 결과와 구현 구성.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:title" content="fines · 금감원 보고서 자동 작성기">
-  <meta property="og:description" content="Excel 원천자료 검사, Google Sheets 적재, Apps Script 보고서 산출과 검증 기록을 연결했습니다.">
+  <meta property="og:description" content="Excel 원천자료 검사, Google Sheets 업로드, Apps Script 보고서 계산과 검증표·실행로그.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/site.css">
   <link rel="stylesheet" href="../assets/services.css">
   <link rel="stylesheet" href="../assets/technical.css">
   <link rel="stylesheet" href="../assets/fines.css">
   <script src="../assets/site.js" defer></script>
-</head>
+<link rel="stylesheet" href="../assets/portfolio.css?v=20261029"></head>
 <body id="top">
   <a class="skip-link" href="#main">본문으로 이동</a>
   <header class="site-header">
     <div class="header-inner">
       <a class="wordmark" href="../index.html" aria-label="Fentanest 포트폴리오 홈">Fentanest<span>.</span></a>
-      <nav aria-label="주 메뉴">
-        <a href="../index.html#services">개발 분야</a>
-        <a href="../index.html#projects" aria-current="page">프로젝트</a>
-        <a href="../career.html">경력</a>
-        <a href="https://github.com/Fentanest" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-      </nav>
+      <nav aria-label="주 메뉴"><a href="../index.html#projects" aria-current="page">프로젝트</a><a href="../index.html#services">구현 분야</a><a href="../career.html">경력</a><a href="https://github.com/Fentanest" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></nav>
     </div>
   </header>
 
@@ -37,86 +32,46 @@
       <a class="back-link" href="worklazy.html">← 문서·파일 자동화</a>
       <p class="eyebrow">DOCUMENT &amp; FILE AUTOMATION / FINES</p>
       <h1>fines<span class="fines-title-detail">금감원 보고서 자동 작성기</span></h1>
-      <p class="case-lead">DB에서 내보낸 Excel을 Google Sheets에 적재하고,<br>Apps Script로 업무보고서와 상시감시보고서를 산출합니다.</p>
+      <p class="case-lead">DB에서 내보낸 Excel을 Google Sheets에 올리고,<br>Apps Script로 업무보고서와 상시감시보고서를 계산합니다.</p>
       <div class="case-meta">
-        <div class="tags"><span>Python · Flask</span><span>Google Sheets API</span><span>Google Apps Script</span><span>보고서 자동화</span></div>
+        <div class="tags"><span>Python · JavaScript</span><span>Flask · pandas</span><span>업무보고서 · 상시감시보고서</span></div>
       </div>
     </section>
 
     <section class="case-section wrap" aria-labelledby="flow-heading">
       <div class="section-heading">
         <span class="eyebrow">처리 순서</span>
-        <h2 id="flow-heading">검사·적재·집계 순서로 처리합니다.</h2>
-        <p>파일에서 필요한 컬럼을 고르고, 기준월을 확인한 뒤 보고서용 문서에 반영합니다.</p>
+        <h2 id="flow-heading">원천 파일에서 보고서까지</h2>
+        <p>계약·투자자 원천자료를 보고 항목별로 집계하는 도구입니다. 입력 파일 검사와 보고서 계산을 나누고, 원천 행 수와 잔액 합계를 검증표에 남깁니다.</p>
       </div>
       <ol class="fines-flow" aria-label="보고서 작성 순서">
         <li><span class="eyebrow" aria-hidden="true">01</span><h3>Excel 입력</h3><p>DB에서 내보낸 계약·투자자 원천자료를 넣습니다.</p></li>
-        <li><span class="eyebrow" aria-hidden="true">02</span><h3>컬럼·기준월 검사</h3><p>필수 컬럼과 같은 월의 파일 중복을 확인합니다.</p></li>
-        <li><span class="eyebrow" aria-hidden="true">03</span><h3>Sheets 적재</h3><p>선택한 컬럼을 보고서별 원천 탭에 올립니다.</p></li>
+        <li><span class="eyebrow" aria-hidden="true">02</span><h3>열·기준월 검사</h3><p>필수 열과 같은 월의 파일 중복을 확인합니다.</p></li>
+        <li><span class="eyebrow" aria-hidden="true">03</span><h3>Sheets 업로드</h3><p>선택한 열을 보고서별 원천 탭에 올립니다.</p></li>
         <li><span class="eyebrow" aria-hidden="true">04</span><h3>재계산 실행</h3><p>사용자가 Google Sheets에서 보고서 재계산을 실행합니다.</p></li>
         <li><span class="eyebrow" aria-hidden="true">05</span><h3>보고서 산출</h3><p>Apps Script가 집계하고 보고서·검증표·실행로그를 갱신합니다.</p></li>
       </ol>
     </section>
 
-    <section class="case-section wrap" aria-labelledby="runtime-heading">
-      <div class="section-heading">
-        <span class="eyebrow">01 / 실행 환경</span>
-        <h2 id="runtime-heading">Windows에서 실행하고, 브라우저에서 입력합니다.</h2>
-        <p>런처에서 로컬 서버를 시작하면 입력 화면이 열립니다. 파일 처리는 Python, 온라인 보고서 계산은 Apps Script가 맡습니다.</p>
-      </div>
-      <div class="fines-environment">
-        <dl class="tech-spec">
-          <div><dt>언어·화면</dt><dd>Python · Flask · HTML · CSS · JavaScript</dd></div>
-          <div><dt>파일 처리</dt><dd>pandas · openpyxl · xlrd</dd></div>
-          <div><dt>자료 적재</dt><dd>Google Sheets API · 서비스 계정 인증</dd></div>
-          <div><dt>온라인 계산</dt><dd>Google Apps Script · JavaScript</dd></div>
-          <div><dt>스크립트 설치</dt><dd>Google OAuth 2.0 · Apps Script API</dd></div>
-          <div><dt>Windows 배포</dt><dd>Tkinter 런처 · PyInstaller</dd></div>
-        </dl>
-        <figure class="project-figure fines-launcher">
-          <a class="image-zoom" href="../assets/fines-launcher.png" data-lightbox data-caption="fines · Windows 런처" aria-label="fines Windows 런처 크게 보기">
-            <img src="../assets/fines-launcher.png" alt="웹서버 시작과 종료를 관리하는 fines Windows 런처" width="527" height="346" loading="lazy" decoding="async">
-            <span class="zoom-hint" aria-hidden="true">크게 보기 ↗</span>
-          </a>
-          <figcaption>Windows 런처 · 로컬 서버 시작·종료와 브라우저 실행</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="case-section wrap" id="screens" aria-labelledby="settings-heading">
-      <div class="section-heading">
-        <span class="eyebrow">02 / 외부 API 연동</span>
-        <h2 id="settings-heading">Google 문서 연결과 스크립트 설치를 구성했습니다.</h2>
-        <p>서비스 계정으로 Sheets에 접근합니다. Google OAuth 인증 후 Apps Script API로 업무보고서·상시감시보고서 문서에 각각 계산 코드를 설치합니다.</p>
-      </div>
-      <figure class="project-figure fines-screen">
-        <a class="image-zoom" href="../assets/fines-settings.png" data-lightbox data-lightbox-scroll data-caption="fines · Google 문서 연결·인증 설정" aria-label="fines Google 문서 연결과 인증 설정 크게 보기">
-          <img src="../assets/fines-settings.png" alt="Google 문서 연결, 인증과 Apps Script 설치를 설정하는 fines 화면" width="1720" height="1380" loading="lazy" decoding="async">
-          <span class="zoom-hint" aria-hidden="true">크게 보기 ↗</span>
-        </a>
-        <figcaption>Google 문서 연결·인증 설정 · 보고서별 문서와 계산 코드 관리</figcaption>
-      </figure>
-    </section>
-
     <section class="case-section wrap" aria-labelledby="upload-heading">
       <div class="section-heading">
-        <span class="eyebrow">03 / 원천자료 입력</span>
-        <h2 id="upload-heading">파일별 컬럼과 기준월을 확인합니다.</h2>
-        <p>계약·투자자 자료의 헤더와 파일 유형을 읽고 필요한 컬럼을 선택합니다. 기준월과 필수 컬럼을 검사한 뒤 원천 탭에 적재합니다.</p>
+        <span class="eyebrow">01 / 원천자료 입력</span>
+        <h2 id="upload-heading">파일별 열과 기준월 검사</h2>
+        <p>계약·투자자 자료의 헤더와 파일 유형을 읽고 필요한 열을 선택합니다. 기준월과 필수 열을 검사한 뒤 원천 탭에 올립니다.</p>
       </div>
       <figure class="project-figure fines-screen">
         <a class="image-zoom" href="../assets/fines-upload.png" data-lightbox data-lightbox-scroll data-caption="fines · 원천자료 입력과 업로드" aria-label="fines 원천자료 입력과 업로드 화면 크게 보기">
-          <img src="../assets/fines-upload.png" alt="보고서 종류와 원천 파일을 선택하고 컬럼·기준월을 확인하는 fines 입력 화면" width="1720" height="1380" loading="lazy" decoding="async">
+          <img src="../assets/fines-upload.png" alt="보고서 종류와 원천 파일을 선택하고 열·기준월을 확인하는 fines 입력 화면" width="1720" height="1380" loading="lazy" decoding="async">
           <span class="zoom-hint" aria-hidden="true">크게 보기 ↗</span>
         </a>
-        <figcaption>원천자료 입력 · 보고서 선택, 파일 확인, 컬럼·기준월 지정</figcaption>
+        <figcaption>원천자료 입력 · 보고서 선택, 파일 확인, 열·기준월 지정</figcaption>
       </figure>
     </section>
 
     <section class="case-section wrap" id="reports" aria-labelledby="report-heading">
       <div class="section-heading">
-        <span class="eyebrow">04 / 집계·보고서 생성</span>
-        <h2 id="report-heading">집계 결과와 계산 근거를 함께 남깁니다.</h2>
+        <span class="eyebrow">02 / 집계·보고서 생성</span>
+        <h2 id="report-heading">보고서와 검증표 작성</h2>
         <p>시트에서 재계산을 실행하면 계약번호로 자료를 연결하고 투자자·상품 분류를 정리합니다. 보고서 항목별로 집계한 뒤 원천 행 수와 잔액 합계를 검증표에 기록합니다.</p>
       </div>
       <p class="small">공개 화면의 등록번호는 삭제했습니다. 회사명과 개인·문서 식별정보는 예시로 치환했습니다.</p>
@@ -137,15 +92,57 @@
         </figure>
       </div>
       <div class="fines-records prose">
-        <p>원천자료·중간 계산·보고서 탭을 나눠 수치의 출처를 확인할 수 있게 구성했습니다. 실행로그에는 계산 시작·종료 시각, 기준월과 자료 건수를 남깁니다.</p>
+        <p>원천자료·중간 계산·보고서 탭을 나눠 계산에 사용한 자료를 확인할 수 있습니다. 실행로그에는 계산 시작·종료 시각, 기준월과 자료 건수를 남깁니다.</p>
       </div>
-      <a class="text-link" href="worklazy.html">문서·파일 자동화 사례 보기 <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="case-section wrap" id="screens" aria-labelledby="settings-heading">
+      <div class="section-heading">
+        <span class="eyebrow">03 / 외부 API 연동</span>
+        <h2 id="settings-heading">Google 문서 연결과 계산 코드 설치</h2>
+        <p>서비스 계정으로 Sheets에 접근합니다. Google OAuth 인증 후 Apps Script API로 업무보고서·상시감시보고서 문서에 각각 계산 코드를 설치합니다.</p>
+      </div>
+      <figure class="project-figure fines-screen">
+        <a class="image-zoom" href="../assets/fines-settings.png" data-lightbox data-lightbox-scroll data-caption="fines · Google 문서 연결·인증 설정" aria-label="fines Google 문서 연결과 인증 설정 크게 보기">
+          <img src="../assets/fines-settings.png" alt="Google 문서 연결, 인증과 Apps Script 설치를 설정하는 fines 화면" width="1720" height="1380" loading="lazy" decoding="async">
+          <span class="zoom-hint" aria-hidden="true">크게 보기 ↗</span>
+        </a>
+        <figcaption>Google 문서 연결·인증 설정 · 보고서별 문서와 계산 코드 관리</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-section wrap" aria-labelledby="runtime-heading">
+      <div class="section-heading">
+        <span class="eyebrow">04 / 구현 구성</span>
+        <h2 id="runtime-heading">파일 처리와 온라인 보고서 계산</h2>
+        <p>런처에서 로컬 서버를 시작하면 입력 화면이 열립니다. 파일 처리는 Python, 온라인 보고서 계산은 Apps Script가 맡습니다.</p>
+      </div>
+      <div class="fines-environment">
+        <dl class="tech-spec">
+          <div><dt>개발 언어</dt><dd>Python · JavaScript</dd></div>
+          <div><dt>프레임워크·GUI</dt><dd>Flask · Tkinter</dd></div>
+          <div><dt>파일 라이브러리</dt><dd>pandas · openpyxl · xlrd</dd></div>
+          <div><dt>입력·결과</dt><dd>Excel 원천자료 → Google Sheets 보고서·검증표</dd></div>
+          <div><dt>외부 API</dt><dd>Google Sheets API · Apps Script API</dd></div>
+          <div><dt>인증</dt><dd>서비스 계정 · Google OAuth 2.0</dd></div>
+          <div><dt>실행 환경</dt><dd>Windows 로컬 서버 · Google Apps Script</dd></div>
+          <div><dt>빌드·배포</dt><dd>PyInstaller · Windows 실행파일</dd></div>
+        </dl>
+        <figure class="project-figure fines-launcher">
+          <a class="image-zoom" href="../assets/fines-launcher.png" data-lightbox data-caption="fines · Windows 런처" aria-label="fines Windows 런처 크게 보기">
+            <img src="../assets/fines-launcher.png" alt="웹서버 시작과 종료를 관리하는 fines Windows 런처" width="527" height="346" loading="lazy" decoding="async">
+            <span class="zoom-hint" aria-hidden="true">크게 보기 ↗</span>
+          </a>
+          <figcaption>Windows 런처 · 로컬 서버 시작·종료와 브라우저 실행</figcaption>
+        </figure>
+      </div>
+      <div class="link-row"><a class="text-link" href="worklazy.html">문서·파일 자동화 사례 보기 <span aria-hidden="true">↗</span></a><a class="text-link" href="peti.html">PETI 파일 변환 보기 <span aria-hidden="true">↗</span></a></div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-top">
-      <p>Fentanest<span class="footer-sub">문서 자동화 · 데이터 파이프라인 · 앱·웹 개발</span></p>
+      <p>Fentanest<span class="footer-sub">문서 자동화 · 데이터 수집·정규화 · 앱·웹 개발</span></p>
       <div><a href="../career.html">실무 경력 <span aria-hidden="true">↗</span></a><a href="https://github.com/Fentanest" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
     </div>
     <div class="footer-bottom"><span>개인 프로젝트 · 실무 제작 사례</span><span>PORTFOLIO / 2026.10</span><a href="#top">맨 위로 ↑</a></div>

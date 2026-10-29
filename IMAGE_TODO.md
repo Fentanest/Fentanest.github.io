@@ -4,6 +4,7 @@
 
 - Worklazy Tools: 홈페이지, 엑셀 병합, 워드 일괄 생성.
 - Word Compare: 변경사항 비교 보고서.
+- PETI: 변환기·익명 TXT·엑셀 결과를 합친 쇼케이스 1장. 여러 TXT 파일 일괄 처리 설명 추가.
 - fines: 런처, Google 연동 설정, 원천자료 업로드, 보고서 2종. 회사명은 fines로 치환, 등록번호는 삭제.
 - FolioTrace: 공개 보유 추정치·최근 공시, 종목별 공시 이력·원문 링크.
 - Market Calendar: 거래소별 월간 달력, 조기폐장 시간·공식 공지 원문 화면.
@@ -14,13 +15,12 @@
 
 ## 추가할 이미지
 
-아래 화면은 해당 페이지에 “화면 준비 중 · 추후 추가”로 표시합니다.
+아래 화면은 해당 페이지에 추후 추가 안내를 표시합니다.
 
 | 위치 | 필요한 이미지 | 넣을 자리 |
 | --- | --- | --- |
 | 안전신문고 앱 | 현행 `Demo 보기`의 목록·상세·통계 | `projects/safetyreport.html`의 기존 앱 화면 교체 또는 추가 |
 | MyTradingDesk + Backtest | 계좌정보 없는 조회·전략 편집·모의 실행 결과 | `projects/api-integration.html` |
-| peti | 가상 TXT 입력과 엑셀 출력 | `projects/worklazy.html#peti` |
 
 ## 교체 기준
 

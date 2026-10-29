@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f5f4ef">
+  <title>PETI · 공직윤리 자료 일괄 변환 · Fentanest</title>
+  <meta name="description" content="공직윤리시스템의 여러 TXT 파일을 전산 입력용 엑셀 한 파일로 변환합니다. Go·Wails·Excelize로 만든 Windows 도구의 실제 화면과 구현 내용.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="PETI · 공직윤리 자료 일괄 변환">
+  <meta property="og:description" content="여러 TXT 파일을 한 번에 처리하고, 정해진 열과 문자열 서식을 유지해 XLSX·XLS로 저장합니다.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/services.css">
+  <link rel="stylesheet" href="../assets/technical.css">
+  <link rel="stylesheet" href="../assets/portfolio.css?v=20261029">
+  <script src="../assets/site.js?v=20261027" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="site-header"><div class="header-inner"><a class="wordmark" href="../index.html" aria-label="Fentanest 포트폴리오 홈">Fentanest<span>.</span></a><nav aria-label="주 메뉴"><a href="../index.html#projects" aria-current="page">프로젝트</a><a href="../index.html#services">구현 분야</a><a href="../career.html">경력</a><a href="https://github.com/Fentanest" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></nav></div></header>
+  <main id="main">
+    <section class="case-hero wrap">
+      <a class="back-link" href="../index.html#projects">← 프로젝트 목록</a>
+      <p class="eyebrow">PETI / FILE CONVERSION</p>
+      <h1>PETI<br>공직윤리 자료 일괄 변환</h1>
+      <p class="case-lead">공직윤리시스템에서 내려받은 여러 TXT 파일을<br>전산 입력용 엑셀 한 파일로 합칩니다.</p>
+      <p class="case-context">파일마다 문자 인코딩과 열을 수작업으로 정리하는 작업을 줄이기 위해 만든 Windows 도구입니다.</p>
+      <div class="case-meta"><div class="tags"><span>Go · JavaScript</span><span>Wails · Excelize</span><span>다수 파일 처리</span></div><div class="link-row"><a class="text-link" href="https://github.com/Fentanest/peti" target="_blank" rel="noopener noreferrer">저장소·실행파일 <span aria-hidden="true">↗</span></a><a class="text-link" href="worklazy.html">문서·파일 자동화 <span aria-hidden="true">↗</span></a></div></div>
+      <nav class="case-jump-links" aria-label="PETI 페이지 목차"><a href="#screens">실행 화면</a><a href="#implementation">주요 구현</a><a href="#technology">구현 구성</a></nav>
+    </section>
+    <section class="case-section wrap" id="screens" aria-labelledby="screens-title">
+      <div class="section-heading"><span class="eyebrow">01 / 실행 화면</span><h2 id="screens-title">변환기와 입력·결과 예시</h2><p>TXT의 구분자를 읽어 순번·식별번호·이름·요청일자·부서·담당자·연락처를 엑셀의 7개 열로 저장합니다.</p></div>
+      <figure class="project-figure peti-showcase"><a class="image-zoom" href="../assets/peti-showcase.png" data-lightbox data-lightbox-scroll data-caption="PETI 변환기와 TXT·엑셀 화면 예시. 이름·소속·식별번호·연락처는 예시 정보로 치환했습니다." aria-label="PETI 변환기와 입력·결과 화면 크게 보기"><img src="../assets/peti-showcase.png" alt="PETI 변환기, 익명 처리한 TXT 입력 자료, 7개 열로 정리된 엑셀 결과를 함께 배치한 화면" loading="eager" decoding="async" width="2200" height="1320"><span class="zoom-hint" aria-hidden="true">크게 보기 ↗</span></a><figcaption>PETI 변환기 · TXT 입력 · 엑셀 결과. 문서 제목과 개인·기관 식별정보는 예시로 바꿨습니다.</figcaption></figure>
+    </section>
+    <section class="case-section wrap" id="implementation" aria-labelledby="implementation-title">
+      <div class="section-heading"><span class="eyebrow">02 / 주요 구현</span><h2 id="implementation-title">여러 파일을 한 번에 처리합니다.</h2></div>
+      <div class="implementation-points">
+        <article><h3>다수 TXT 파일 통합</h3><p>파일 선택창이나 드래그로 여러 TXT를 추가합니다. 목록에서 파일을 빼거나 순서를 바꾼 뒤 한 엑셀 파일로 합칩니다.</p></article>
+        <article><h3>문자 인코딩·구분자 처리</h3><p>EUC-KR로 저장된 문자를 읽고 <code>|</code> 구분자로 값을 나눕니다. 각 행의 항목을 정해진 7개 열에 넣습니다.</p></article>
+        <article><h3>번호의 앞자리 0 유지</h3><p>값을 문자열 서식으로 저장합니다. 순번과 식별번호를 숫자로 바꾸면서 앞자리 0이 사라지는 문제를 방지합니다.</p></article>
+        <article><h3>XLSX·XLS 저장</h3><p>XLSX는 Excelize로 만듭니다. 구형 XLS가 필요하면 설치된 Microsoft Excel의 COM 기능을 호출해 변환합니다.</p></article>
+      </div>
+    </section>
+    <section class="case-section wrap" aria-labelledby="flow-title">
+      <div class="section-heading"><span class="eyebrow">03 / 처리 순서</span><h2 id="flow-title">파일 선택부터 결과 저장까지</h2></div>
+      <ol class="peti-flow"><li><strong>파일과 순서 선택</strong>TXT를 추가하고 처리 순서, 저장 폴더와 출력 형식을 지정합니다.</li><li><strong>읽기·열 분리·통합</strong>각 파일을 읽어 문자 인코딩을 변환하고, 구분된 값을 엑셀 행으로 누적합니다.</li><li><strong>결과 저장</strong>문자열 서식을 적용한 엑셀을 저장하고 변환 행 수와 저장 위치를 표시합니다.</li></ol>
+    </section>
+    <section class="case-section wrap" id="technology" aria-labelledby="technology-title">
+      <div class="section-heading"><span class="eyebrow">04 / 구현 구성</span><h2 id="technology-title">언어·파일 처리·실행 조건</h2></div>
+      <dl class="tech-spec"><div><dt>개발 언어</dt><dd>Go · JavaScript · HTML · CSS</dd></div><div><dt>앱 프레임워크</dt><dd>Wails</dd></div><div><dt>파일 라이브러리</dt><dd>Excelize · Go x/text</dd></div><div><dt>빌드 도구</dt><dd>Vite · Wails CLI</dd></div><div><dt>입력 형식</dt><dd>EUC-KR TXT · <code>|</code> 구분</dd></div><div><dt>출력 형식</dt><dd>XLSX · XLS · 7개 열 · 문자열 서식</dd></div><div><dt>실행·연동</dt><dd>Windows 앱 · XLS 변환 시 Microsoft Excel COM 호출</dd></div></dl>
+      <p class="project-use-note">변환한 엑셀은 전산 입력용 파일로 사용합니다. XLS 저장에는 Microsoft Excel 설치가 필요합니다.</p>
+      <div class="link-row"><a class="text-link" href="https://github.com/Fentanest/peti/blob/main/app.go" target="_blank" rel="noopener noreferrer">파일 변환 코드 <span aria-hidden="true">↗</span></a><a class="text-link" href="worklazy.html">다른 문서·파일 도구 <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-top"><p>Fentanest<span class="footer-sub">문서 자동화 · 데이터 수집·정규화 · 앱·웹 개발</span></p><div><a href="../career.html">실무 경력 <span aria-hidden="true">↗</span></a><a href="https://github.com/Fentanest" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div><div class="footer-bottom"><span>개인 프로젝트 · 실무 제작 사례</span><span>PORTFOLIO / 2026.10</span><a href="#top">맨 위로 ↑</a></div></footer>
+  <dialog class="image-dialog" id="image-dialog" aria-label="이미지 크게 보기"><div class="dialog-toolbar"><p id="dialog-caption"></p><button type="button" class="dialog-close" aria-label="이미지 닫기">닫기 <span aria-hidden="true">×</span></button></div><div class="dialog-image-wrap"><img id="dialog-image" alt=""></div></dialog>
+</body>
+</html>
