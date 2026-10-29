@@ -10,11 +10,13 @@
 | 문서 수집·정규화 | `projects/data-tools.html` | FolioTrace, Market Calendar — 문서 수집·정규화·누적 저장 |
 | 앱·웹 데이터 서비스 | `projects/safetyreport.html` | 안전신문고 앱·공유 데이터·커뮤니티 지도·크롬 확장 |
 | 외부 API·실시간 연동 | `projects/api-integration.html` | MyTradingDesk, Backtest |
-| 스프레드시트 대시보드 | `projects/spreadsheets.html` | 실무자용 엑셀 조회·집계 화면 5종 |
+| 스프레드시트 대시보드 | `projects/spreadsheets.html` | 열 이름 기반 동적 참조, 별도 원천 문서 연결, 조회·집계 화면 5종 |
 
 `index.html`은 대표 프로젝트 6개, 구현 분야와 전체 프로젝트 목록, `career.html`은 금융 준법·품질관리 경력과 실무 제작 사례를 담았습니다. `projects/fines.html`에는 금감원 보고서 자동 작성기를, `projects/peti.html`에는 공직윤리 TXT 일괄 변환기를 따로 정리했습니다. 기술 구성은 개발 언어, 라이브러리, 저장소, 입출력 형식, 외부 API, 실행·배포 환경을 구분합니다.
 
 HTML·CSS·JavaScript로 구성했습니다. 설치·빌드 과정과 서버 프로그램은 없습니다. 이미지 확대 보기 외의 본문·이동 기능은 JavaScript 없이도 동작합니다.
+
+대표 프로젝트는 Worklazy Tools, 나만의 안전신문고, fines, PETI, FolioTrace, 엑셀 대시보드 순서로 표시합니다.
 
 ## GitHub Pages 배포
 
@@ -46,7 +48,9 @@ HTML·CSS·JavaScript로 구성했습니다. 설치·빌드 과정과 서버 프
 
 ## 반영한 화면
 
-Worklazy Tools 공개 화면 3장, FolioTrace·Market Calendar 실제 서비스 화면 각 2장, Word Compare 결과, 안전신문고 앱 공개 화면 2장, 커뮤니티 지도와 크롬 확장 합성 화면, 개인·회사 식별정보를 삭제한 실무 대시보드 5장을 반영했습니다.
+Worklazy Tools 공개 화면 3장, FolioTrace·Market Calendar 실제 서비스 화면 각 2장, Word Compare 결과, 안전신문고 앱 공개 화면 2장, 커뮤니티 지도와 크롬 확장 합성 화면을 반영했습니다. 실무 대시보드는 조회·집계 화면 5장에 열 참조표와 별도 원천 문서 연결 화면 2장을 추가했습니다. 개인·회사 식별정보와 문서 주소는 가리거나 예시로 바꿨습니다.
+
+대시보드는 열 이름을 기준으로 참조표를 만들고 MATCH·ADDRESS·SUBSTITUTE·INDIRECT로 원천자료의 열 순서와 양식 변경에 대응하는 구조입니다. Google Sheets 화면의 IMPORTRANGE·ARRAYFORMULA는 별도 원천 문서 연결과 배열 처리로 구분해 설명합니다.
 
 FolioTrace는 공개 보유 추정 현황과 종목별 공시 이력, Market Calendar는 국내 월간 달력과 미국 거래시간·공식 공지 화면을 넣었습니다. 2026-10-29에 worklazy.net에서 직접 촬영했으며, 필요한 화면 영역만 잘라 수치와 표시는 유지했습니다.
 

@@ -108,6 +108,10 @@ Fentanest가 만든 업무 화면입니다. 개인·회사 식별정보를 삭�
 | `assets/dashboard-03.png` | 부동산 담보대출 현황 |
 | `assets/dashboard-04.png` | 투자상품 목록 |
 | `assets/dashboard-05.png` | 상품 통합 검색 |
+| `assets/dashboard-column-mapping.png` | 열 이름으로 헤더 위치와 참조 주소를 연결하는 표 |
+| `assets/dashboard-source-import.png` | IMPORTRANGE로 별도 원천 문서의 자료를 연결하는 화면 |
+
+추가한 2장은 Fentanest가 2026-10-29에 제공한 Google Sheets 화면입니다. 계정 표시·문서 주소·원천 문서 ID·기관명과 개인명·회원번호·이메일·등록번호·연락처·계좌정보는 가리거나 예시로 바꿨습니다. 원본 해상도와 수식의 함수명·참조 구조는 유지했습니다. 원본 캡처와 원천 문서는 공개 저장소에 포함하지 않습니다.
 
 ## fines · 금감원 보고서 자동 작성기
 
