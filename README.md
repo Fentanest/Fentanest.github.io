@@ -1,22 +1,22 @@
 # Fentanest 포트폴리오
 
-금융·준법 실무에서 만든 업무 도구와 개인 개발 프로젝트를 소개하는 정적 포트폴리오입니다. 이직 지원과 외주 프로젝트 검토에 함께 사용할 수 있도록 제작 배경, 실제 화면, 주요 구현과 실행 조건을 정리했습니다.
+금융회사에서 만들어 쓴 프로그램과 개인적으로 개발한 앱·웹 서비스를 소개합니다. 각 프로젝트에 만든 이유, 주요 기능, 사용 화면과 필요한 실행 환경을 정리했습니다.
 
 ## 페이지
 
 | 분야 | 페이지 | 사례 |
 | --- | --- | --- |
 | 문서·파일 자동화 | `projects/worklazy.html` | Worklazy Tools, Word Compare, ExcelMerger, peti, fines |
-| 문서 수집·정규화 | `projects/data-tools.html` | FolioTrace, Market Calendar — 문서 수집·정규화·누적 저장 |
+| 공시와 거래 일정 | `projects/data-tools.html` | FolioTrace, Market Calendar — 공시와 거래소 공지 수집 |
 | 앱·웹 데이터 서비스 | `projects/safetyreport.html` | 안전신문고 앱·공유 데이터·커뮤니티 지도·크롬 확장 |
 | 외부 API·실시간 연동 | `projects/api-integration.html` | MyTradingDesk, Backtest |
-| 스프레드시트 대시보드 | `projects/spreadsheets.html` | 열 이름 기반 동적 참조, 별도 원천 문서 연결, 조회·집계 화면 5종 |
+| 회원·대출 관리 시트 | `projects/spreadsheets.html` | 열 이름으로 자료 찾기, 별도 파일 연결, 회원·대출·투자 내역 확인 |
 
-`index.html`은 대표 프로젝트 6개, 구현 분야와 전체 프로젝트 목록, `career.html`은 금융 준법·품질관리 경력과 실무 제작 사례를 담았습니다. `projects/fines.html`에는 금감원 보고서 자동 작성기를, `projects/peti.html`에는 공직윤리 TXT 일괄 변환기를 따로 정리했습니다. 기술 구성은 개발 언어, 라이브러리, 저장소, 입출력 형식, 외부 API, 실행·배포 환경을 구분합니다.
+`index.html`은 대표 프로젝트 6개, 작업 분야와 전체 프로젝트 목록, `career.html`은 금융 준법·품질관리 경력과 업무 중 만들어 쓴 도구를 담았습니다. `projects/fines.html`에는 금감원 보고서 자동 작성기를, `projects/peti.html`에는 공직윤리 TXT 일괄 변환기를 따로 정리했습니다. 기술 구성은 개발 언어, 라이브러리, 저장소, 입출력 형식, 외부 API, 실행·배포 환경을 구분합니다.
 
 HTML·CSS·JavaScript로 구성했습니다. 설치·빌드 과정과 서버 프로그램은 없습니다. 이미지 확대 보기 외의 본문·이동 기능은 JavaScript 없이도 동작합니다.
 
-대표 프로젝트는 Worklazy Tools, 나만의 안전신문고, fines, PETI, FolioTrace, 엑셀 대시보드 순서로 표시합니다.
+대표 프로젝트는 Worklazy Tools, 나만의 안전신문고, fines, PETI, FolioTrace, 회원·대출 관리 시트 순서로 표시합니다.
 
 ## GitHub Pages 배포
 
@@ -56,10 +56,10 @@ FolioTrace는 공개 보유 추정 현황과 종목별 공시 이력, Market Cal
 
 커뮤니티 지도는 광고·로그인 ID를 제거하고 차량 표기를 예시로 바꿨습니다. 크롬 확장은 통계창과 차량별·주소별 조회창이 한 화면에 보이도록 합성했습니다. 사용자명·담당자명·차량번호·신고번호·상세 주소를 예시로 바꾼 이미지를 사용했습니다. 각 창의 수치와 표시 내용은 유지했습니다.
 
-fines는 런처, Google 연동 설정, 원천자료 업로드, 보고서 결과 2종을 반영했습니다. 서비스명·회사명은 fines로 바꾸고, 등록번호는 삭제하고, 개인명·상품명·문서 ID·인증 파일 경로는 예시로 치환했습니다. 화면 크기와 표의 수치·날짜는 유지했습니다.
+fines는 런처, Google 연동 설정, 보고서 작성에 쓸 자료 업로드, 보고서 결과 2종을 반영했습니다. 서비스명·회사명은 fines로 바꾸고, 등록번호는 삭제하고, 개인명·상품명·문서 ID·인증 파일 경로는 예시로 치환했습니다. 화면 크기와 표의 수치·날짜는 유지했습니다.
 
 PETI는 실제 변환기·TXT·엑셀 화면 3장을 한 장의 쇼케이스로 배치했습니다. 이름·소속·담당자·식별번호·연락처·문서 제목은 예시 정보로 치환하고, 이름·이메일이 보이는 알림을 제거했습니다. 원본 UI와 표의 열 구성은 유지했습니다.
 
-추가할 화면은 해당 페이지와 IMAGE_TODO.md에 표시했습니다.
+추가할 화면은 IMAGE_TODO.md에 정리했습니다.
 
 GitHub Pages 안내: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
