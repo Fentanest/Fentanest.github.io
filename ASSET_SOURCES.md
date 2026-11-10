@@ -140,3 +140,5 @@ Fentanest가 제공한 실제 실행 화면 5장입니다. 서비스명과 회�
 Fentanest가 제공한 실제 변환기, TXT 입력, 엑셀 결과 화면 3장을 한 장으로 배치했습니다. 원본 UI와 엑셀 열 제목을 유지하고, 문서 제목·개인명·기관명·부서·담당자·식별번호·연락처·요청일자는 예시 정보로 바꿨습니다. 이름·회사 이메일이 보이는 알림은 제거했습니다.
 
 TXT와 엑셀은 서로 다른 자료의 캡처이므로 입력 예시·결과 예시로 구분합니다. 다수 파일 처리와 파일 순서 변경은 PETI 코드에서 확인한 기능이며, 변환기 화면에 임의의 파일 목록을 추가하지 않았습니다. 원본 캡처와 개별 익명 처리 작업 파일은 이 저장소에 포함하지 않습니다.
+
+2026-11-10: Community dashboard and ranking recaptured from safemap.worklazy.net at native browser resolution. UUID labels anonymized consistently; vehicle labels anonymized. Dashboard blank ad band removed without scaling. Dashboard with all five extra charts expanded 1165x3476; ranking 1165x2336. Original browser capture was JPEG, edited deliverables stored losslessly as PNG.
