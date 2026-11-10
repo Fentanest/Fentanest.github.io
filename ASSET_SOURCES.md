@@ -14,15 +14,21 @@ https://github.com/Fentanest/safetyreport-mobile/blob/99d4d1da6d3b808dbd7dd95e69
 
 파일: `assets/safety-map.png`
 
-https://github.com/Fentanest/safetyreport-mobile/blob/99d4d1da6d3b808dbd7dd95e6965615eeca3abad/docs/images/readme/screen-map.png
+https://github.com/Fentanest/safetyreport-mobile/blob/793850f41b9f6cd11f724883547eb8ba0c946c4e/docs/images/readme/screen-map.png
 
-공개 README 화면 · 현재 버전과 일부 차이 있음
+2026-11-10 공개 README에서 확인한 화면. 핀이 지역별로 분산된 지도로 교체했습니다.
 
 ## 커뮤니티 지도
 
 파일: `assets/safety-community-map.png`
 
-Fentanest가 제공한 실제 서비스 화면입니다. 광고와 식별정보를 제거한 사본을 사용합니다.
+2026-11-10 Fentanest가 제공한 실제 서비스 화면입니다. 쿠팡·알리 광고를 제거하고, 상단 UUID와 차량번호 표시만 예시로 치환했습니다. 그 밖의 원본 픽셀과 수치는 유지했습니다.
+
+## 커뮤니티 참여자 랭킹
+
+파일: `assets/safety-community-ranking.png`
+
+2026-11-10 Fentanest가 제공한 실제 서비스 화면입니다. 상단 ID와 모든 랭킹 UUID만 일관된 예시 ID로 치환했습니다. 그 밖의 원본 픽셀과 수치는 유지했습니다.
 
 ## 크롬 확장 통계·차량별·주소별 조회
 
