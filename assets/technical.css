@@ -45,7 +45,7 @@
 .service-screen-gallery{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start;gap:28px;margin-top:35px;scroll-margin-top:110px}
 .service-screen-gallery .project-figure{width:100%;max-width:none;margin:0}
 .service-screen-map .image-zoom{border:1px solid #24302a;background:#0a0a0a;overflow:hidden;border-radius:5px}
-.service-screen-map img{aspect-ratio:4/5;object-fit:cover;object-position:top}
+.service-screen-map img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;object-position:top}
 .service-screen-extension{scroll-margin-top:110px}
 .service-screen-extension .image-zoom{border:1px solid #d6deea;background:#f6f9ff}
 .service-screen-extension img{display:block;width:100%;height:auto;object-fit:contain}
