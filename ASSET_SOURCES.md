@@ -133,6 +133,17 @@ Fentanest가 제공한 실제 실행 화면 5장입니다. 서비스명과 회�
 
 원천자료와 인증정보, 비공개 프로그램 소스는 이 저장소에 포함하지 않습니다.
 
+## MyTradingDesk · WTS 실행 화면
+
+Fentanest가 2026-11-11에 직접 제공한 실제 실행 화면 4장입니다. 상단 브라우저 탭·주소 영역 86px만 잘라 1920 × 946으로 저장했습니다. 차트·표·수치·서비스 UI의 픽셀은 변경하지 않았으며, 주소창을 포함한 원본은 공개 저장소에 넣지 않았습니다.
+
+| 파일 | 화면 |
+| --- | --- |
+| `assets/wts-chart-orders.png` | 관심 종목, 캔들·보조지표, 주문, 실시간 호가 |
+| `assets/wts-market-indices.png` | 국내외 주요 지수와 지수 비교 차트 |
+| `assets/wts-financial-ai.png` | 재무 요약, 최근 5개년 실적, AI 분석 보고서 목록 |
+| `assets/wts-community.png` | 토스·네이버·씽크풀의 종목별 최신 글 |
+
 ## PETI · 공직윤리 자료 일괄 변환
 
 파일: `assets/peti-showcase.png` · 2200 × 1320

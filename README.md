@@ -6,7 +6,8 @@
 
 | 분야 | 페이지 | 사례 |
 | --- | --- | --- |
-| 문서·파일 자동화 | `projects/worklazy.html` | Worklazy Tools, Word Compare, ExcelMerger, peti, fines |
+| 웹 도구 서비스 | `projects/worklazy.html` | Worklazy Tools — 웹 도구, 배포·사용성 개선, 브라우저 파일 처리 |
+| 문서·파일 자동화 사례 | `projects/automation.html` | Word Compare, ExcelMerger, PETI, fines의 개발 배경·업무 적용·성과 |
 | 공시와 거래 일정 | `projects/data-tools.html` | FolioTrace, Market Calendar — 공시와 거래소 공지 수집 |
 | 앱·웹 데이터 서비스 | `projects/safetyreport.html` | 안전신문고 앱·공유 데이터·커뮤니티 지도·크롬 확장 |
 | 외부 API·실시간 연동 | `projects/api-integration.html` | MyTradingDesk, Backtest |
@@ -17,6 +18,10 @@
 HTML·CSS·JavaScript로 구성했습니다. 설치·빌드 과정과 서버 프로그램은 없습니다. 이미지 확대 보기 외의 본문·이동 기능은 JavaScript 없이도 동작합니다.
 
 대표 프로젝트는 Worklazy Tools, 나만의 안전신문고, fines, PETI, FolioTrace, 회원·대출 관리 시트 순서로 표시합니다.
+
+각 상세 페이지에는 개발 배경, 실제 업무·개인 사용 사례와 성과를 정리했습니다. fines의 보고서 작성 3시간 → 5분, PETI의 수십~수백 개 TXT 처리, 관리 시트의 전산 화면 설계 활용 등 핵심 결과는 상단과 홈 카드에 표시합니다. MyTradingDesk 페이지는 실제 WTS 화면 4장과 구현 경험, 별도의 Backtest 설명을 담았습니다.
+
+안전신문고의 커뮤니티 지도·통계와 참여자 랭킹은 나란히 배치하고, Chrome 확장 화면은 그 아래 전체 폭으로 표시합니다. 긴 화면은 같은 높이의 미리보기를 제공하고 클릭하면 전체 화면으로 확대합니다.
 
 ## GitHub Pages 배포
 
