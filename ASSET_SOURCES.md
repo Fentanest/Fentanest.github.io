@@ -145,6 +145,16 @@ Fentanest가 2026-11-11에 직접 제공한 실제 실행 화면 5장입니다. 
 | `assets/wts-financial-ai.png` | 재무 요약, 최근 5개년 실적, AI 분석 보고서 목록 |
 | `assets/wts-community.png` | 토스·네이버·씽크풀의 종목별 최신 글 |
 
+### 2026-11-16 추가 화면
+
+Fentanest가 직접 제공한 실행 화면 3장입니다. 기존 WTS 이미지와 동일하게 상단 브라우저 탭·주소 영역 86px만 잘라 1920 × 946으로 저장했습니다. 나머지 픽셀과 화면 수치는 유지했으며, 주소창을 포함한 원본은 공개 저장소에 넣지 않았습니다.
+
+| 파일 | 활성 메뉴·탭 | 화면 |
+| --- | --- | --- |
+| `assets/wts-market-investor-aggregates.png` | 수급 · 코스피 전체 · 수량 · 순매수상위 | 시장 전체 투자자별 순매수 대금과 외국인·기관의 종목별 장중 가집계 |
+| `assets/wts-program-trading.png` | 국내 주식 → 종목수급 | SK하이닉스의 당일 프로그램 매매동향과 투자자 구분별 매매 집계 |
+| `assets/wts-intraday-investor-flow.png` | 국내 주식 → 종목수급 | SK하이닉스의 외국인·기관 차수별 장중 잠정 집계와 순매수 수량 흐름 |
+
 ## PETI · 공직윤리 자료 일괄 변환
 
 파일: `assets/peti-showcase.png` · 2200 × 1320
